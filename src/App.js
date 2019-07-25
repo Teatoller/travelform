@@ -1,13 +1,12 @@
-import React, { Component } from 'react';
-import TravelFormComponent from './Components/TravelFormComponent';
+import React from "react";
+import Form from "./Components/TravelFormContainer";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <TravelFormComponent />
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
 
+export default App;
