@@ -1,31 +1,38 @@
 import React from "react";
+import "../../src/App.css";
 
 function TravelFormComponent(props) {
   return (
-    <div>
+    <div id="outer-border">
       <form>
-        <input
-          name="firstName"
-          value={props.data.firstName}
-          onChange={props.handleChange}
-          placeholder="First Name"
-        />
-        <br />
+        <div className="bio-data">
+          <input
+            type="text"
+            name="firstName"
+            value={props.data.firstName}
+            onChange={props.handleChange}
+            placeholder="First Name"
+          />
+          <br />
 
-        <input
-          name="lastName"
-          value={props.data.lastName}
-          onChange={props.handleChange}
-          placeholder="Last Name"
-        />
-        <br />
+          <input
+            type="text"
+            name="lastName"
+            value={props.data.lastName}
+            onChange={props.handleChange}
+            placeholder="Last Name"
+          />
+          <br />
 
-        <input
-          name="age"
-          value={props.data.age}
-          onChange={props.handleChange}
-          placeholder="Age"
-        />
+          <input
+            type="text"
+            name="age"
+            value={props.data.age}
+            onChange={props.handleChange}
+            placeholder="Age"
+          />
+        </div>
+
         <br />
 
         <label>
@@ -36,7 +43,7 @@ function TravelFormComponent(props) {
             checked={props.data.gender === "male"}
             onChange={props.handleChange}
           />{" "}
-          Male
+          <b>Male</b>
         </label>
 
         <br />
@@ -49,7 +56,7 @@ function TravelFormComponent(props) {
             checked={props.data.gender === "female"}
             onChange={props.handleChange}
           />{" "}
-          Female
+          <b>Female</b>
         </label>
 
         <br />
@@ -75,7 +82,7 @@ function TravelFormComponent(props) {
             onChange={props.handleChange}
             checked={props.data.isVeg}
           />{" "}
-          Vegetarian?
+          <b>Vegetarian?</b>
         </label>
         <br />
 
@@ -86,7 +93,7 @@ function TravelFormComponent(props) {
             onChange={props.handleChange}
             checked={props.data.isChicken}
           />{" "}
-          Chicken?
+          <b>Chicken?</b>
         </label>
         <br />
 
@@ -97,25 +104,41 @@ function TravelFormComponent(props) {
             onChange={props.handleChange}
             checked={props.data.isLactoseFree}
           />{" "}
-          Lactose Free?
+          <b>Lactose Free?</b>
         </label>
         <br />
 
-        <button>Submit</button>
+        <button className="form-btn">Submit</button>
       </form>
       <hr />
-      <h2>Entered information:</h2>
-      <p>
-        Your name: {props.data.firstName} {props.data.lastName}
-      </p>
-      <p>Your age: {props.data.age}</p>
-      <p>Your gender: {props.data.gender}</p>
-      <p>Your destination: {props.data.destination}</p>
-      <p>Your dietary restrictions:</p>
+      <div id="output-data">
+        <h2>Entered information:</h2>
+        <p>
+          <b>Your name:</b> {props.data.firstName} {props.data.lastName}
+        </p>
+        <p>
+          <b>Your age:</b> {props.data.age}
+        </p>
+        <p>
+          <b>Your gender:</b> {props.data.gender}
+        </p>
+        <p>
+          <b>Your destination:</b> {props.data.destination}
+        </p>
+        <p>
+          <b>Your dietary restrictions:</b>
+        </p>
 
-      <p>Vegetarian: {props.data.isVeg ? "Yes" : "No"}</p>
-      <p>Chicken: {props.data.isChicken ? "Yes" : "No"}</p>
-      <p>Lactose Free: {props.data.isLactoseFree ? "Yes" : "No"}</p>
+        <p>
+          <b>Vegetarian:</b> {props.data.isVeg ? "Yes" : "No"}
+        </p>
+        <p>
+          <b>Chicken:</b> {props.data.isChicken ? "Yes" : "No"}
+        </p>
+        <p>
+          <b>Lactose Free:</b> {props.data.isLactoseFree ? "Yes" : "No"}
+        </p>
+      </div>
     </div>
   );
 }

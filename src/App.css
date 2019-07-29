@@ -1,33 +1,62 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#outer-border {
+  margin: 0.5em;
+  background-color:#fdb353;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    border-bottom: 1px solid #cecece;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+
+    margin: auto;
+    width: 50%;
+    flex-direction: column;
+    border: 1px solid #C8833C;
+    box-shadow:
+    /* The top layer shadow */
+        0 1px 1px rgba(0,0,0,0.15),
+            /* The second layer */
+        0 10px 0 -5px #eee,
+            /* The second layer shadow */
+        0 10px 1px -4px rgba(0,0,0,0.15),
+            /* The third layer */
+        0 20px 0 -10px #eee,
+            /* The third layer shadow */
+        0 20px 1px -9px rgba(0,0,0,0.15);
+    padding: 30px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.bio-data {
+  margin-left: 0.5em;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#output-data {
+  margin: 0.5em;
+  font-size: 18px;
+  background-color: #fda83a;
+  padding:0.5em
+}
+
+.form-btn {
+  background-color: #539dfd
+}
+
+.bio-data input[type=text] {
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    width: 500px;
+    height: 1.5em;
+    font-size: 18px;
+}
+
+input[type=checkbox]:focus {
+    outline: 0;
 }
